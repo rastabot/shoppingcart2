@@ -14,51 +14,54 @@
       </div>
   
 </div>
-<table class="table table-bordered">  
-  <thead>
-      <tr>
-        <th>Image</th>
-        <th>Name</th>
-        <th>Price</th>
-        <th>Quantity</th>
-        <th>Action</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr  *ngFor="let prod of products | searchfilter:filtername:'product_name'">
-        <td>
-            <a  class="details" routerLink="details/{{prod.product_id}}">
-              <img src="{{prod.product_img}}" class="img-thumbnail" height="100px" width="100px" />
-            </a>
-        </td>
-        <td>{{prod.product_name | uppercase }}</td>
-        <td>{{prod.product_price | currency}}</td>
-        <td>{{prod.product_quantity}}</td>
-        <td> 
-            <button class="btn btn-success btn-xs plus" 
-                        (click)="add(prod.product_id)">
-              <i class="glyphicon glyphicon-plus"></i>
-            </button>
-              <button class="btn btn-danger btn-xs minus" 
-              (click)="del(prod.product_id)">
-              <i class="glyphicon glyphicon-minus">
-              </i>
-            </button>
-            <br>
-            <button class="btn btn-warning btn-sm" 
-            (click)="delpopup(prod.product_id)">Remove Product</button>
-            </td>
-            <!-- buttons -->
-            
-      </tr>
-    </tbody>
-    <tfoot>
-      <tr>
-        <td>Total Price</td>
-        <td colspan="6" class="text-right">{{total | currency: '$' }}
-        </td>
-      </tr>
-  </table>
+<div>
+  <table class="table table-bordered">  
+    <thead>
+        <tr>
+          <th>Image</th>
+          <th>Name</th>
+          <th>Price</th>
+          <th>Quantity</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr  *ngFor="let prod of products | searchfilter:filtername:'product_name' | paginate: { itemsPerPage: 5, currentPage: p }">
+          <td>
+              <a  class="details" routerLink="details/{{prod.product_id}}">
+                <img src="{{prod.product_img}}" class="img-thumbnail" height="100px" width="100px" />
+              </a>
+          </td>
+          <td>{{prod.product_name | uppercase }}</td>
+          <td>{{prod.product_price | currency}}</td>
+          <td>{{prod.product_quantity}}</td>
+          <td> 
+              <button class="btn btn-success btn-xs plus" 
+                          (click)="add(prod.product_id)">
+                <i class="glyphicon glyphicon-plus"></i>
+              </button>
+                <button class="btn btn-danger btn-xs minus" 
+                (click)="del(prod.product_id)">
+                <i class="glyphicon glyphicon-minus">
+                </i>
+              </button>
+              <br>
+              <button class="btn btn-warning btn-sm" 
+              (click)="delpopup(prod.product_id)">Remove Product</button>
+              </td>
+              <!-- buttons -->
+              
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <td>Total Price</td>
+          <td colspan="6" class="text-right">{{total | currency: '$' }}
+          </td>
+        </tr>
+    </table>
+    <pagination-controls (pageChange)="p = $event"></pagination-controls>
+  </div>
   
            
 

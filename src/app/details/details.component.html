@@ -10,18 +10,22 @@
                 <div><span>Name: </span>{{product.product_name}}</div>
                 <div><span>Price: </span>${{product.product_price}}</div>
             </div>
-            
           </div>
-  
-        
-        
-        
         <div class="container">
           <h2>Description:</h2>
           <textarea name="message" rows="5" cols="60"> {{product.product_details}}
           </textarea>
         </div>
-        
+        <h2>You may be interested in :</h2>
+        <div class="row">
+            <div class="column">
+                <a *ngFor="let product of products"   routerLink="/details/{{product.product_id}}">                
+                    <img src="{{product.product_img}}" class="img-thumbnail" height="130px" width="130px"/>                            
+                </a>
+            </div>
+          
+          
+        </div>
       
       </div>
       <div>

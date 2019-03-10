@@ -12,9 +12,12 @@ export class HomeComponent implements OnInit {
   products : Product[];
   total:number = 0;
   numberOfItems:number ;
+  p: number = 1;
 
 
-  constructor(private productService : ProductsDataService) { }
+  constructor(private productService : ProductsDataService) {
+
+   }
 
 
   getProducts():void {

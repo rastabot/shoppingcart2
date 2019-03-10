@@ -1,6 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import {NgxPaginationModule} from 'ngx-pagination';
+
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -21,12 +23,13 @@ import { SearchfilterPipe } from './searchfilter.pipe';
     ContactComponent,
     AboutComponent,
     SearchfilterPipe,
-    
+        
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    NgxPaginationModule
   ],
   providers: [],
   bootstrap: [AppComponent]

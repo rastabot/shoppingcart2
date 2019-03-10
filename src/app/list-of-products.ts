@@ -32,5 +32,54 @@ export const LIST_OF_PRODUCTS: Product[] =[
         product_price : 130,
         product_details : "Enjoy enhanced and immersive listening experience by investing in these Sony headphones. The pair is designed for you to enjoy the powerful bass and clear sound. They are durable and can handle rough use as well.",
         product_quantity : 1
-      }
+      },
+      {
+        product_id : 104,
+        product_img : "https://images.freeimages.com/images/large-previews/52b/telefono-1636109.jpg",
+        product_name : "old phone",
+        product_price : 50,
+        product_details : "This old public phone is what people used before iphones and android cellphones.",
+        product_quantity : 1
+      },
+      {
+        product_id : 106,
+        product_img : "https://images.unsplash.com/photo-1545454675-60abfab2a58a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80",
+        product_name : "keyboard",
+        product_price : 120,
+        product_details : "This super nice keyboard will drain your batteries fast, also can be used for self defense.",
+        product_quantity : 1
+      },
+      {
+        product_id : 107,
+        product_img : "http://www.freeimageslive.com/galleries/workplace/office2/preview/business_shoes.jpg",
+        product_name : "shoes",
+        product_price : 66,
+        product_details : "Shoes for your feet. Good for walking but not for playing soccer. You can throw them at anoying people",
+        product_quantity : 1
+      },
+      {
+        product_id : 108,
+        product_img : "https://cdn.stocksnap.io/img-thumbs/960w/TZHYCANBO9.jpg",
+        product_name : "Clock",
+        product_price : 110,
+        product_details : "An old clock, it will ring and anoy the crap out of you",
+        product_quantity : 1
+      },
+      {
+        product_id : 109,
+        product_img : "https://images.pexels.com/photos/163096/ios-new-mobile-gadget-163096.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+        product_name : "mobile",
+        product_price : 200,
+        product_details : "Iphone from apple, with a screen and a a lot of technology, one blue and one red protection cover in case you drop it in the toilet",
+        product_quantity : 1
+      },
+      {
+        product_id : 110,
+        product_img : "https://images.pexels.com/photos/459653/pexels-photo-459653.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+        product_name : "laptop",
+        product_price : 4100,
+        product_details : "this laptop comuter comes with a cup of coffee and a plant. The desk is not part of this deal.",
+        product_quantity : 1
+      },
+
 ]

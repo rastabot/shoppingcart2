@@ -13,6 +13,7 @@ import { Location } from '@angular/common';
 export class DetailsComponent implements OnInit {
 
   @Input() product: Product;
+  products: Product[];
 
 
   constructor(
@@ -27,8 +28,14 @@ export class DetailsComponent implements OnInit {
       .subscribe(product => this.product = product);
   }
 
+  getProducts():void {
+    this.productService.getProducts()
+    .subscribe(products => this.products = products.slice(1,3))
+  }
+
   ngOnInit():void {
     this.getProduct();
+    this.getProducts();
   }
 
   goBack(): void {
